@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes bellRing {
+  0% {
+    transform: rotate(0);
+  }
+
+  5% {
+    transform: rotate(15deg);
+  }
+
+  10% {
+    transform: rotate(-15deg);
+  }
+
+  15% {
+    transform: rotate(13deg);
+  }
+
+  20% {
+    transform: rotate(-13deg);
+  }
+
+  25% {
+    transform: rotate(8deg);
+  }
+
+  30% {
+    transform: rotate(-8deg);
+  }
+
+  35% {
+    transform: rotate(4deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  45% {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes badgePulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes badgeEnter {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+
+  75% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.notification-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-area h3 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
+.notification-bell {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.notification-bell i {
+  font-size: 1.6rem;
+  color: #555;
+  animation-name: bellRing;
+  /* Set animation duration to 2 seconds */
+ animation-duration: 2s;
+  /* Set animation delay to 1 second */
+animation-delay: 1s;
+  /* Set animation iteration count to 2 */
+animation-iteration-count: 2;
+  /* Set animation direction to normal */
+animation-direction: normal;
+  /* Set animation timing function to ease-in-out */
+animation-timing-function: ease-in-out;
+}
+
+.notification-bell:hover i {
+  animation-name: bellRing;
+  /* Set animation duration to 1 second */
+
+  /* Set animation delay to 0 seconds */
+
+  /* Set animation iteration count to 1 */
+
+  /* Set animation direction to normal */
+
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* animation-name: badgeEnter; */
+  /* Set animation duration to 0.8 seconds */
+/* animation-duration: 0.8s; */
+  /* Set animation delay to 2 seconds */
+/* animation-delay: 2s; */
+  /* Set animation iteration count to 1 */
+/* animation-iteration-count: 1; */
+  /* Set animation fill mode to both */
+/* animation-fill-mode: both; */
+
+  /* Set animation shorthand to badgeEnter 0.8s 2s 1 both, badgePulse 1.5s 2.8s infinite alternate */
+    animation: badgeEnter 0.8s 2s 1 both, badgePulse 1.5s 2.8s infinite alternate;
+
+}
