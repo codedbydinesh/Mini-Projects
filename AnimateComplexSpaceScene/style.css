@@ -1,0 +1,299 @@
+/* Import the animations.css file */
+@import './animations.css';
+/* Space Animation Scene */
+:root {
+  --space-bg: #0a0e29;
+  --star-color: #ffffff;
+  --planet-1: #ff9500;
+  --planet-2: #2e89ff;
+  --rocket-primary: #ff2d55;
+  --rocket-secondary: #5ac8fa;
+  --alien-green: #34c759;
+  --meteor-trail: #ff9500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--space-bg);
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Stars background */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(var(--star-color) 1px, transparent 1px);
+  background-size: 50px 50px;
+  /* Animate the twinkling effect */
+  animation: twinkle 5s linear infinite;
+}
+
+
+
+/* Planet 1 */
+.planet-1 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 30% 30%, var(--planet-1), #8a3800);
+  border-radius: 50%;
+  top: 70%;
+  left: 15%;
+  box-shadow: 0 0 20px rgba(255, 149, 0, 0.6);
+  /* Animate the planet movement */
+  animation: float 10s ease-in-out infinite;
+}
+
+/* Planet 2 */
+.planet-2 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at 40% 40%, var(--planet-2), #103c82);
+  border-radius: 50%;
+  top: 25%;
+  right: 15%;
+  box-shadow: 0 0 30px rgba(46, 137, 255, 0.6);
+  /* Animate the planet movement */
+  animation: float 15s ease-in-out infinite reverse;
+}
+
+/* Planet ring */
+.planet-2::after {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  left: -15px;
+  top: 60px;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+}
+
+/* Rocket */
+.rocket {
+  position: absolute;
+  width: 60px;
+  height: 120px;
+  left: 20%;
+  bottom: 120px;
+  /* Animate the rocket movement */
+  animation: rocketFly 15s linear infinite;
+}
+
+.rocket-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.rocket-body {
+  position: absolute;
+  width: 30px;
+  height: 80px;
+  background-color: var(--rocket-primary);
+  border-radius: 0 0 50% 50%;
+  bottom: 0;
+  left: 15px;
+}
+
+.rocket-window {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--rocket-secondary);
+  border-radius: 50%;
+  bottom: 50px;
+  left: 22.5px;
+}
+
+.rocket-fin {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background-color: var(--rocket-primary);
+}
+
+.fin-left {
+  transform: skew(30deg, 0);
+  bottom: 70px;
+  left: 0;
+}
+
+.fin-right {
+  transform: skew(-30deg, 0);
+  bottom: 70px;
+  right: 0;
+}
+
+.rocket-flame {
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  background: linear-gradient(to bottom, #ffdb4c, #ff5e3a);
+  bottom: 80px;
+  left: 20px;
+  border-radius: 50% 50% 20% 20%;
+  /* Animate the rocket flame */
+  animation: flame 0.2s linear infinite alternate;
+  transform-origin: center bottom;
+}
+
+/* Alien */
+.alien {
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  right: -50px;
+  top: 40%;
+  /* Animate the alien movement */
+  animation: alienFly 15s linear infinite;
+}
+
+.alien-head {
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  background-color: var(--alien-green);
+  border-radius: 50% 50% 40% 40%;
+  top: 0;
+  left: 5px;
+}
+
+.alien-eye {
+  position: absolute;
+  width: 12px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.eye-left {
+  top: 15px;
+  left: 8px;
+}
+
+.eye-right {
+  top: 15px;
+  right: 8px;
+}
+
+.alien-body {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: var(--alien-green);
+  border-radius: 10px;
+  bottom: 0;
+  left: 10px;
+}
+
+/* UFO */
+.ufo {
+  position: absolute;
+  width: 120px;
+  height: 50px;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Animate the UFO movement */
+  animation: ufoMove 20s ease-in-out infinite;
+}
+
+.ufo-body {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(to right, #8e8e93, #d1d1d6, #8e8e93);
+  border-radius: 50%;
+  top: 0;
+  left: 10px;
+}
+
+.ufo-dome {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  background-color: rgba(46, 137, 255, 0.7);
+  border-radius: 50% 50% 0 0;
+  top: -15px;
+  left: 30px;
+  box-shadow: 0 0 15px var(--planet-2);
+}
+
+.ufo-light {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+  bottom: -60px;
+  left: 40px;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+  /* Animate the UFO beam */
+  animation: ufoLight 3s ease-in-out infinite;
+}
+
+/* Meteors */
+.meteor {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.meteor-1 {
+  top: 20%;
+  left: 30%;
+  /* Animate the meteor movement */
+  animation: meteorFall 6s linear infinite;
+  animation-delay: 1s;
+
+}
+
+.meteor-2 {
+  top: 15%;
+  right: 25%;
+  /* Animate the meteor movement */
+  animation: meteorFall 4s linear infinite;
+  animation-delay: 2s;
+}
+
+.meteor-3 {
+  top: 10%;
+  left: 60%;
+  /* Animate the meteor movement */
+  animation: meteorFall 7s linear infinite;
+  animation-delay: 4s;
+}
+
+.meteor::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: linear-gradient(to left, white, transparent);
+  transform: rotate(-45deg) translateX(-10px);
+}
