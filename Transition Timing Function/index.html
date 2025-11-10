@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transition Timing Functions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Transforms, Transitions and Animation</h1>
+    <div class="card-grid">
+      <!-- Basic timing functions -->
+      <div class="timing-card">
+        <h3>ease</h3>
+        <div class="demo-box ease">
+          <div class="element"></div>
+        </div>
+        <p>Starts slow, speeds up, then ends slow (default)</p>
+      </div>
+
+      <div class="timing-card">
+        <h3>linear</h3>
+        <div class="demo-box linear">
+          <div class="element"></div>
+        </div>
+        <p>Constant speed from start to finish</p>
+      </div>
+
+      <div class="timing-card">
+        <h3>ease-in</h3>
+        <div class="demo-box ease-in">
+          <div class="element"></div>
+        </div>
+        <p>Starts slow, then speeds up</p>
+      </div>
+
+      <div class="timing-card">
+        <h3>ease-out</h3>
+        <div class="demo-box ease-out">
+          <div class="element"></div>
+        </div>
+        <p>Starts fast, then slows down</p>
+      </div>
+
+      <div class="timing-card">
+        <h3>ease-in-out</h3>
+        <div class="demo-box ease-in-out">
+          <div class="element"></div>
+        </div>
+        <p>Slow start, fast middle, slow end</p>
+      </div>
+
+      <div class="timing-card">
+        <h3>cubic-bezier</h3>
+        <div class="demo-box cubic-bezier">
+          <div class="element"></div>
+        </div>
+        <p>Custom: cubic-bezier(0.68, -0.55, 0.27, 1.55)</p>
+      </div>
+
+      <!-- Real-world examples -->
+      <div class="example-card">
+        <h3>Button Hover Effect</h3>
+        <button class="demo-button">Hover Me</button>
+        <p>Uses ease-out for a natural hover effect</p>
+      </div>
+
+      <div class="example-card">
+        <h3>Menu Item Hover</h3>
+        <nav class="demo-menu">
+          <a href="#" class="menu-item">Home</a>
+          <a href="#" class="menu-item">About</a>
+          <a href="#" class="menu-item">Services</a>
+          <a href="#" class="menu-item">Contact</a>
+        </nav>
+        <p>Uses ease-in-out for smooth indicator movement</p>
+      </div>
+
+      <div class="example-card">
+        <h3>Image Hover</h3>
+        <div class="image-container">
+          <img src="https://picsum.photos/id/29/300/200" alt="Demo image">
+        </div>
+        <p>Uses ease for subtle zoom effect</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
