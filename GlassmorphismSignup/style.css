@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./laptop-bg.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.background{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.glass-card{
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+    padding: 20px 40px;
+    width: 350px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    text-align: center;
+}
+
+.glass-card h1{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.glass-card p{
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.input-group{
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.input-group label{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+    display: block;
+}
+.input-group input{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.input-group input::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+button{
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(to right, rgb(81, 88, 2), rgb(89, 142, 65));
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+button:hover{
+    background: linear-gradient(to right, rgb(89, 142, 65), rgb(81, 88, 2));
+}
+
+.login-link{
+    margin-top: 20px;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+}
+
+.login-link a{
+    color: rgb(12, 12, 249);
+    font-weight: bold;
+    text-decoration: none;
+
+}
+.login-link a:hover{
+    color: blue;
+    text-decoration: underline;
+    transition: all 0.5s ease;
+}
+
