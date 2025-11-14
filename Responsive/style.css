@@ -1,5 +1,53 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --text-color: #1a1c20;
+    --link-color: #4a76ee;
+    --background-color: #eeeff1;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+    .logo{
+            color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    .icon-container {
+        a {
+            margin: 0px 10px;
+            color: #1a1c20;
+
+            span {
+                margin-left: 5px;
+            }
+        }
+
+        .email-btn {
+            color: var(--background-color);
+            background-color: var(--text-color);
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+    }
 }
