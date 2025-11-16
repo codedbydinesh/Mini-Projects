@@ -136,9 +136,111 @@ body {
                 border-radius: 2px;
             }
 
-            span{
+            span {
                 font-size: 18px;
             }
         }
+    }
+}
+
+.testimony-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+
+    h2 {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+
+    .group {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        .personal-details {
+            text-align: center;
+            flex: 2;
+
+            img {
+                width: 200px;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                border-radius: 50%;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-weight: 600;
+            }
+
+            p:last-child {
+                font-weight: normal;
+            }
+
+        }
+
+        .text {
+            flex: 8;
+        }
+
+
+    }
+}
+
+.contact-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .group {
+        display: flex;
+        gap: 50px;
+
+        .text {
+            flex: 1;
+            margin-top: 20px;
+        }
+
+        form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            input,
+            textarea {
+                border: 2px solid var(--link-color);
+                background-color: transparent;
+                padding: 10px;
+                margin-bottom: 15px;
+                outline: none;
+                resize: none;
+            }
+
+            button {
+                font-size: 16px;
+                color: #fff;
+                background-color: var(--link-color);
+                border: none;
+                height: 50px;
+                cursor: pointer;
+                transition: .1s;
+            }
+            button:hover{
+                filter: brightness(.9);
+            }
+        }
+    }
+}
+
+footer{
+    border-top: 1px solid var(--link-color);
+    p{
+        text-align: center;
+        padding: 20px;
+        font-size: 16px;
+        color: var(--text-color);
     }
 }
