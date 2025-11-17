@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -228,19 +229,100 @@ body {
                 cursor: pointer;
                 transition: .1s;
             }
-            button:hover{
+
+            button:hover {
                 filter: brightness(.9);
             }
         }
     }
 }
 
-footer{
+footer {
     border-top: 1px solid var(--link-color);
-    p{
+
+    p {
         text-align: center;
         padding: 20px;
         font-size: 16px;
         color: var(--text-color);
+    }
+}
+
+@media (max-width: 740px) {
+    .hero-section {
+        flex-direction: column-reverse;
+
+        .profile{
+            img{
+                width: 300px;
+            }
+        }
+    }
+    .testimony-section {
+        text-align: center;
+        .group{
+            flex-direction: column;
+        }
+    }
+    .contact-section {
+        text-align: center;
+        .group{
+            flex-direction: column;
+        }
+        form label{
+            text-align: left;
+        }
+    }
+}
+
+
+@media (max-width: 630px) {
+    .navbar {
+        padding: 0px 20px;
+
+        .icon-container {
+            a {
+                font-size: 22px;
+
+                span {
+                    display: none;
+                }
+            }
+
+            .email-btn {
+                color: var(--text-color);
+                background-color: transparent;
+                padding: unset;
+            }
+        }
+    }
+
+    .hero-section {
+        padding: 0 20px;
+
+        .text h2 {
+            font-size: 30px;
+        }
+    }
+
+    .skills-section {
+        padding: 0px 20px;
+    }
+
+    .testimony-section {
+        padding: 0px 20px;
+        text-align: center;
+
+        .group{
+            flex-direction: column;
+        }
+    }
+
+    .contact-section {
+        padding: 0px 20px;
+        text-align: center;
+        .group{
+            flex-direction: column;
+        }
     }
 }
