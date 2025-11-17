@@ -252,24 +252,29 @@ footer {
     .hero-section {
         flex-direction: column-reverse;
 
-        .profile{
-            img{
+        .profile {
+            img {
                 width: 300px;
             }
         }
     }
+
     .testimony-section {
         text-align: center;
-        .group{
+
+        .group {
             flex-direction: column;
         }
     }
+
     .contact-section {
         text-align: center;
-        .group{
+
+        .group {
             flex-direction: column;
         }
-        form label{
+
+        form label {
             text-align: left;
         }
     }
@@ -313,7 +318,7 @@ footer {
         padding: 0px 20px;
         text-align: center;
 
-        .group{
+        .group {
             flex-direction: column;
         }
     }
@@ -321,8 +326,24 @@ footer {
     .contact-section {
         padding: 0px 20px;
         text-align: center;
-        .group{
+
+        .group {
             flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 395px) {
+    .navbar {
+        padding: 0px 10px;
+
+        .logo {
+            font-size: 18px;
+        }
+
+        .icon-container a {
+            font-size: 18px;
+            margin: 0 4px;
         }
     }
 }
