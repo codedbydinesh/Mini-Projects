@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.header .container {
+    max-width: 1300px;
+    margin: 0px auto;
+    padding: 0px 25px;
+}
+
+.header .container .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 20px;
+    gap: 20px;
+}
+.header .container .navbar a{
+    text-decoration: none;
+    color: #555;
+}
+.header .container .hero-section{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .container .hero-section .hero-content-section{
+    flex: 1;
+
+    h1{
+        font-size: 50px;
+        line-height: 60px;
+        margin: 25px 0px;
+    }
+    p{
+        color: #555;
+    }
+
+    img{
+        width: 100%;
+        padding: 50px 0;
+    }
+}
+
+/* categories  */
+
+
+/* common styling */
+.small-container{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0px 25px;
+}
+
+.categories{
+    margin: 70px 0;
+}
+.categories .small-container{    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.categories .small-container .col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.categories .small-container .col-3 img{
+    width: 100%;
+}
+
+/* featured products */
+
+.featured-product{
+    display: flex;
+    flex-direction: column;
+    
+}
+.featured-product .title{
+    color: #555;
+    line-height: 60px;
+    margin-bottom: 80px;
+    text-align: center;
+    position: relative;
+}
+.featured-product .title::after{
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.featured-product .product-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.featured-product .product-container .product-card{
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(25% - 20px);
+    min-width: 200px;
+    padding: 10px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: all .5s ease;
+
+    .product-title{
+        color: #555;
+    }
+    .product-price{
+        color: #555;
+        font-size: 14px;
+    }
+}
+.featured-product .product-container .product-card:hover{
+    transform: translateY(-5px);
+}
