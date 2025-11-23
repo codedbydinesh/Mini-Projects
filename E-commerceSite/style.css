@@ -126,12 +126,13 @@
     flex-basis: calc(25% - 20px);
     min-width: 200px;
     padding: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     cursor: pointer;
     transition: all .5s ease;
 
     .product-title {
         color: #555;
+        margin-top: 10px;
     }
 
     .product-price {
@@ -414,6 +415,7 @@ a {
     display: inline-block;
     border: 1px solid #ff523b;
     margin-left: 10px;
+    margin-bottom: 10px;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -440,7 +442,7 @@ a {
 
 .single-product .product-item {
     padding: 20px;
-    flex-basis: 50%;
+    flex-basis: 1;
     min-width: 300px;
 
     p {
@@ -509,7 +511,7 @@ a {
 
 /* cart section styling  */
 
-.cart-page{
+.cart-page {
     margin: 80px auto;
 }
 
@@ -534,14 +536,17 @@ table th:last-child {
 table td {
     padding: 10px 5px;
 }
-table td:last-child{
+
+table td:last-child {
     text-align: right;
 }
 
 table td .cart-info {
     display: flex;
     flex-wrap: wrap;
-     p, small{
+
+    p,
+    small {
         color: #555;
     }
 }
@@ -550,28 +555,32 @@ table td .cart-info img {
     width: 80px;
     height: 80px;
     margin-right: 10px;
-   
+
 }
-table td a{
+
+table td a {
     color: #ff523b;
     font-size: 12px;
 }
-table td input{
-        width: 40px;
+
+table td input {
+    width: 40px;
     height: 30px;
     padding: 5px;
 }
 
-.total-price{
+.total-price {
     display: flex;
     justify-content: flex-end;
 }
-.total-price table{
+
+.total-price table {
     border-top: 3px solid #ff523b;
     width: 100%;
     max-width: 350px;
 }
-.total-price .btn{
+
+.total-price .btn {
     display: inline-block;
     background: #ff523b;
     color: #fff;
@@ -580,6 +589,65 @@ table td input{
     border-radius: 30px;
     transition: background .5s;
 }
-.total-price .btn:hover{
+
+.total-price .btn:hover {
     background: #563434;
+}
+
+
+/* responsive styling  */
+
+@media only screen and (max-width: 600px) {
+    .header .container .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .categories .small-container .col-3 {
+        flex-basis: 100%;
+    }
+
+    .featured-product .product-container .product-card {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .offer-banner .small-container .banner-content {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .offer-banner .small-container .banner-content .col-2 img {
+        padding: 30px;
+    }
+
+    .offer-banner .small-container .banner-content .col-2 h1 {
+        font-size: 38px;
+        margin: 10px auto;
+    }
+    .testimonial .small-container .testimonial-cards .card{
+        flex-basis: 100%;
+    }
+    .footer .container .footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    /* product page  */
+
+    .small-container .product-row .product-card {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* product details page  */
+    .small-container .product-details .product-item h1{
+        font-size: 36px;
+        line-height: 1.2;
+        margin: 15px 0;
+    }
 }
