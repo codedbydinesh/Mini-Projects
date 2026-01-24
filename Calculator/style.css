@@ -58,3 +58,9 @@ button:hover{
 .operator{
     color: #6ee4d5;
 }
+
+@media (max-width: 400px) {
+    .calculator {
+        transform: scale(0.9);
+    }
+}
